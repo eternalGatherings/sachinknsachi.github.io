@@ -2,62 +2,84 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>SachinKn Pro Calculator</title>
+<title>Calculator Pro</title>
+<style>
+html, body {
+	width: 100%;		/* Make the root elements take up the full viewport width */
+	height: 100%;		/* Make the root elements take up the full viewport height */
+	margin: 0; 			/* Remove default margins */
+	padding: 0; 		/* Remove default padding */
+	overflow: hidden;	/* Prevent scrolling if content overflows */
+}
+
+.container {
+	width: 400px;
+	border: 1px solid gray;
+	display: flex;
+	margin: 20px;
+	padding: 20px;
+}
+
+.container input[type="text"], .container select, .container label {
+	margin-right: 10px;
+}
+</style>
 </head>
 <body>
-	<select id="action-select">
-		<option value="add">Addition</option>
-		<option value="sub">Subtraction</option>
-		<option value="mul">Multiplication</option>
-		<option value="div">Division</option>
-	</select>
+	<div class="container">
 
-	<input type="text" id="firstNum" name="firstNum" style="width: 30px">
-	<label id="operation-label">+</label>
-	<input type="text" id="secondNum" name="secondNum" style="width: 30px">
-	<label id="Rlabel">=</label>
-	<label id="result-label"></label>
+		<select id="action-select">
+			<option value="add">Addition</option>
+			<option value="sub">Subtraction</option>
+			<option value="mul">Multiplication</option>
+			<option value="div">Division</option>
+		</select> <input type="text" id="firstNum" name="firstNum" style="width: 30px">
+		<label id="operation-label">+</label> <input type="text"
+			id="secondNum" name="secondNum" style="width: 30px"> <label
+			id="Rlabel">=</label> <input id="result-label" style="width: 130px"
+			disabled></label>
 
-	<script>
-        const actionSelect = document.getElementById("action-select");
-        const firstNumInput = document.getElementById("firstNum");
-        const operationLabel = document.getElementById("operation-label");
-        const secondNumInput = document.getElementById("secondNum");
-        const resultLabel = document.getElementById("result-label");
-        
-        function calculateResult() {
-            const selectedAction = actionSelect.value;
-            const firstNum = parseFloat(firstNumInput.value);
-            const secondNum = parseFloat(secondNumInput.value);
+		<script>
+			const actionSelect = document.getElementById("action-select");
+			const firstNumInput = document.getElementById("firstNum");
+			const operationLabel = document.getElementById("operation-label");
+			const secondNumInput = document.getElementById("secondNum");
+			const resultLabel = document.getElementById("result-label");
 
-            let result;
+			function calculateResult() {
+				const selectedAction = actionSelect.value;
+				const firstNum = parseFloat(firstNumInput.value);
+				const secondNum = parseFloat(secondNumInput.value);
 
-            if (selectedAction === "add") {
-            	 operationLabel.textContent = "+";
-                result = firstNum + secondNum;
-            } else if (selectedAction === "sub") {
-            	 operationLabel.textContent = "-";
-                result = firstNum - secondNum;
-            } else if (selectedAction === "mul") {
-            	operationLabel.textContent = "*";
-                result = firstNum * secondNum;
-            } else if (selectedAction === "div") {
-            	operationLabel.textContent = "/";
-                if (secondNum === 0) {
-                    result = "Cannot divide by zero";
-                } else {
-                    result = firstNum / secondNum;
-                }
-            } else if (isNaN(firstNum) || isNaN(secondNum)) {
-                result = "Invalid input";
-            }
+				let result;
 
-            resultLabel.textContent = result;
-        }
+				if (isNaN(firstNum) || isNaN(secondNum)) {
+					result = "Invalid input";
+				} else if (selectedAction === "add") {
+					operationLabel.textContent = "+";
+					result = firstNum + secondNum;
+				} else if (selectedAction === "sub") {
+					operationLabel.textContent = "-";
+					result = firstNum - secondNum;
+				} else if (selectedAction === "mul") {
+					operationLabel.textContent = "*";
+					result = firstNum * secondNum;
+				} else if (selectedAction === "div") {
+					operationLabel.textContent = "/";
+					if (secondNum === 0) {
+						result = "Cannot divide by zero";
+					} else {
+						result = firstNum / secondNum;
+					}
+				}
 
-        actionSelect.addEventListener("change", calculateResult);
-		firstNumInput.addEventListener("change", calculateResult);
-		secondNumInput.addEventListener("change", calculateResult);
-    </script>
+				resultLabel.value = result;
+			}
+
+			actionSelect.addEventListener("change", calculateResult);
+			firstNumInput.addEventListener("change", calculateResult);
+			secondNumInput.addEventListener("change", calculateResult);
+		</script>
+	</div>
 </body>
 </html>
