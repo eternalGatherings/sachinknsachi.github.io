@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Calculator Pro</title>
+<meta charset="UTF-8">
+<title>Calculator Pro</title>
 </head>
 <body>
-    <select id="action-select">
-        <option value="add">Addition</option>
-        <option value="sub">Subtraction</option>
-        <option value="mul">Multiplication</option>
-        <option value="div">Division</option>
-    </select>
+	<select id="action-select">
+		<option value="add">Addition</option>
+		<option value="sub">Subtraction</option>
+		<option value="mul">Multiplication</option>
+		<option value="div">Division</option>
+	</select>
 
-    <br>
-    <input type="text" id="firstNum" name="firstNum">
-    <label id="operation-label">+</label>
-    <input type="text" id="secondNum" name="secondNum">
-    <button id="calculate-btn">Calculate</button>
-    <label id="result-label"></label>
-    
-    <script>
+	<input type="text" id="firstNum" name="firstNum" style="width: 30px">
+	<label id="operation-label">+</label>
+	<input type="text" id="secondNum" name="secondNum" style="width: 30px">
+	<label id="Rlabel">=</label>
+	<label id="result-label"></label>
+
+	<script>
         const actionSelect = document.getElementById("action-select");
         const firstNumInput = document.getElementById("firstNum");
         const operationLabel = document.getElementById("operation-label");
         const secondNumInput = document.getElementById("secondNum");
-        const calculateBtn = document.getElementById("calculate-btn");
         const resultLabel = document.getElementById("result-label");
-
-        calculateBtn.addEventListener("click", () => {
+        
+        function calculateResult() {
             const selectedAction = actionSelect.value;
             const firstNum = parseFloat(firstNumInput.value);
             const secondNum = parseFloat(secondNumInput.value);
@@ -35,17 +33,31 @@
             let result;
 
             if (selectedAction === "add") {
+            	 operationLabel.textContent = "+";
                 result = firstNum + secondNum;
             } else if (selectedAction === "sub") {
+            	 operationLabel.textContent = "-";
                 result = firstNum - secondNum;
             } else if (selectedAction === "mul") {
+            	operationLabel.textContent = "*";
                 result = firstNum * secondNum;
             } else if (selectedAction === "div") {
-                result = firstNum / secondNum;
+            	operationLabel.textContent = "/";
+                if (secondNum === 0) {
+                    result = "Cannot divide by zero";
+                } else {
+                    result = firstNum / secondNum;
+                }
+            } else if (isNaN(firstNum) || isNaN(secondNum)) {
+                result = "Invalid input";
             }
 
-            resultLabel.textContent = "Result: " + result;
-        });
+            resultLabel.textContent = result;
+        }
+
+        actionSelect.addEventListener("change", calculateResult);
+		firstNumInput.addEventListener("change", calculateResult);
+		secondNumInput.addEventListener("change", calculateResult);
     </script>
 </body>
 </html>
