@@ -27,11 +27,11 @@
 		}
 
 		.mainContent {
-			margin: 1rem;
-			padding: 2rem;
+			margin: 0.5rem;
+			padding: 4rem;
 			display: flex;
 			flex-direction: column;
-			border: 2px solid lightslategray;
+			border: 3px solid lightslategray;
 			justify-content: center;
 			align-items: center;
 		}
@@ -45,17 +45,18 @@
 	<div class="mainContent">
 		<h2><b>Select the Operation from the Dropdown & Enter the values to calculate.</b></h2>
 		<div style="font-size: 1.5rem;">
-			<select id="action-select" style="width: 10rem; height: 4.9rem; margin: 1rem; font-size: 1.5rem;  background-color: #f8f8f8;">
+			<select id="action-select" style="width: 8rem; height: 4.9rem; margin: 1rem; font-size: 1.5rem; 
+			background-color: rgb(230, 230, 230); border: 0.1rem solid lightslategray;">
 				<option value="add">Addition</option>
 				<option value="sub">Subtraction</option>
 				<option value="mul">Multiplication</option>
 				<option value="div">Division</option>
 			</select> <input type="text" id="firstNum" name="firstNum"
-				style="width: 8rem; height: 4.5rem; margin: 1rem; font-size: 1.5rem;">
+				style="width: 6rem; height: 4.5rem; margin: 1rem; font-size: 1.5rem; border: 0.1rem solid lightslategray;">
 			<label id="operation-label">+</label>
-			<input type="text" id="secondNum" name="secondNum" style="width: 8rem; height: 4.5rem; margin: 1rem; font-size: 1.5rem;">
+			<input type="text" id="secondNum" name="secondNum" style="width: 6rem; height: 4.5rem; margin: 1rem; font-size: 1.5rem; border: 0.1rem solid lightslategray;">
 			<label id="Rlabel">=</label>
-			<input id="result-label" style="width: 15rem; height: 4.5rem; margin: 1rem; font-size: 1.5rem;" disabled></label>
+			<input id="result-label" style="width: 15rem; height: 4.5rem; margin: 1rem; font-size: 1.5rem; background-color: rgb(230, 230, 230); border: 0.1rem solid lightslategray;" disabled></label>
 
 			<script>
 				const actionSelect = document.getElementById("action-select");
