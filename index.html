@@ -1,85 +1,108 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Calculator Pro</title>
-<style>
-html, body {
-	width: 100%;		/* Make the root elements take up the full viewport width */
-	height: 100%;		/* Make the root elements take up the full viewport height */
-	margin: 0; 			/* Remove default margins */
-	padding: 0; 		/* Remove default padding */
-	overflow: hidden;	/* Prevent scrolling if content overflows */
-}
+	<meta charset="ISO-8859-1">
+	<title>Sachin: Pro Calculator</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
 
-.container {
-	width: 400px;
-	border: 1px solid gray;
-	display: flex;
-	margin: 20px;
-	padding: 20px;
-}
+		header {
+			font-family: Arial, sans-serif;
+			text-align: center;
+			background: #333333;
+			color: white;
+			padding: 1rem;
+		}
 
-.container input[type="text"], .container select, .container label {
-	margin-right: 10px;
-}
-</style>
+		footer {
+			font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+			text-align: center;
+			background: #555;
+			color: white;
+			padding: 0.5rem;
+		}
+
+		.mainContent {
+			margin: 1rem;
+			padding: 2rem;
+			display: flex;
+			flex-direction: column;
+			border: 2px solid lightslategray;
+			justify-content: center;
+			align-items: center;
+		}
+	</style>
 </head>
+
 <body>
-	<div class="container">
+	<header>
+		<h3>Pro Calculator</h3>
+	</header>
+	<div class="mainContent">
+		<h2><b>Select the Operation from the Dropdown & Enter the values to calculate.</b></h2>
+		<div style="font-size: 1.5rem;">
+			<select id="action-select" style="width: 15rem; height: 5.9rem; margin: 1rem; font-size: 1.5rem;  background-color: #f8f8f8;">
+				<option value="add">Addition</option>
+				<option value="sub">Subtraction</option>
+				<option value="mul">Multiplication</option>
+				<option value="div">Division</option>
+			</select> <input type="text" id="firstNum" name="firstNum"
+				style="width: 10rem; height: 5.5rem; margin: 1rem; font-size: 1.5rem;">
+			<label id="operation-label">+</label>
+			<input type="text" id="secondNum" name="secondNum" style="width: 10rem; height: 5.5rem; margin: 1rem; font-size: 1.5rem;">
+			<label id="Rlabel">=</label>
+			<input id="result-label" style="width: 20rem; height: 5.5rem; margin: 1rem; font-size: 1.5rem;" disabled></label>
 
-		<select id="action-select">
-			<option value="add">Addition</option>
-			<option value="sub">Subtraction</option>
-			<option value="mul">Multiplication</option>
-			<option value="div">Division</option>
-		</select> <input type="text" id="firstNum" name="firstNum" style="width: 30px">
-		<label id="operation-label">+</label> <input type="text"
-			id="secondNum" name="secondNum" style="width: 30px"> <label
-			id="Rlabel">=</label> <input id="result-label" style="width: 130px"
-			disabled></label>
+			<script>
+				const actionSelect = document.getElementById("action-select");
+				const firstNumInput = document.getElementById("firstNum");
+				const operationLabel = document.getElementById("operation-label");
+				const secondNumInput = document.getElementById("secondNum");
+				const resultLabel = document.getElementById("result-label");
 
-		<script>
-			const actionSelect = document.getElementById("action-select");
-			const firstNumInput = document.getElementById("firstNum");
-			const operationLabel = document.getElementById("operation-label");
-			const secondNumInput = document.getElementById("secondNum");
-			const resultLabel = document.getElementById("result-label");
+				function calculateResult() {
+					const selectedAction = actionSelect.value;
+					const firstNum = parseFloat(firstNumInput.value);
+					const secondNum = parseFloat(secondNumInput.value);
 
-			function calculateResult() {
-				const selectedAction = actionSelect.value;
-				const firstNum = parseFloat(firstNumInput.value);
-				const secondNum = parseFloat(secondNumInput.value);
+					let result;
 
-				let result;
-
-				if (isNaN(firstNum) || isNaN(secondNum)) {
-					result = "Invalid input";
-				} else if (selectedAction === "add") {
-					operationLabel.textContent = "+";
-					result = firstNum + secondNum;
-				} else if (selectedAction === "sub") {
-					operationLabel.textContent = "-";
-					result = firstNum - secondNum;
-				} else if (selectedAction === "mul") {
-					operationLabel.textContent = "*";
-					result = firstNum * secondNum;
-				} else if (selectedAction === "div") {
-					operationLabel.textContent = "/";
-					if (secondNum === 0) {
-						result = "Cannot divide by zero";
-					} else {
-						result = firstNum / secondNum;
+					if (isNaN(firstNum) || isNaN(secondNum)) {
+						result = "Invalid input";
+					} else if (selectedAction === "add") {
+						operationLabel.textContent = "+";
+						result = firstNum + secondNum;
+					} else if (selectedAction === "sub") {
+						operationLabel.textContent = "-";
+						result = firstNum - secondNum;
+					} else if (selectedAction === "mul") {
+						operationLabel.textContent = "*";
+						result = firstNum * secondNum;
+					} else if (selectedAction === "div") {
+						operationLabel.textContent = "/";
+						if (secondNum === 0) {
+							result = "Cannot divide by zero";
+						} else {
+							result = firstNum / secondNum;
+						}
 					}
+
+					resultLabel.value = result;
 				}
 
-				resultLabel.value = result;
-			}
-
-			actionSelect.addEventListener("change", calculateResult);
-			firstNumInput.addEventListener("change", calculateResult);
-			secondNumInput.addEventListener("change", calculateResult);
-		</script>
+				actionSelect.addEventListener("change", calculateResult);
+				firstNumInput.addEventListener("change", calculateResult);
+				secondNumInput.addEventListener("change", calculateResult);
+			</script>
+		</div>
 	</div>
+	<footer>
+		<p>&copy; 2023 Sachin's Pro Calculator. All rights reserved.</p>
+	</footer>
 </body>
+
 </html>
