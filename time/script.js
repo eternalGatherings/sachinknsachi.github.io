@@ -23,6 +23,7 @@ function getTime() {
 	hour.textContent = date.getHours();
 	minute.textContent = m;
 	minutes.style = `--dRotate:${6 * m}deg`;
+	
 	if (s == 0) {
 		seconds.classList.add('stop-anim')
 	} else {
@@ -35,5 +36,6 @@ function getTime() {
 	}
 	seconds.style = `--dRotate:${6 * s}deg`;
 }
+
 setInterval(getTime, 1000);
 getTime();
