@@ -8,7 +8,7 @@ body, html {
     background: #000;
     margin: 0;
     height: 100vh;
-    color: bisque;
+    color: #fff;
     font-family: "Comfortaa", cursive;
 }
 
@@ -26,7 +26,7 @@ body, html {
     position: absolute;
     width: 8px;
     height: 1px;
-    background: bisque;
+    background: #fff9;
     line-height: 20px;
     transform-origin: 50%;
     z-index: 5;
@@ -37,7 +37,7 @@ body, html {
 }
 
 .spike:nth-child(5n+1) {
-    box-shadow: -7px 0 bisque;
+    box-shadow: -7px 0 #fff9;
 }
 
 .spike:nth-child(5n+1):after {
@@ -102,7 +102,7 @@ transform: translate(-50%, -50%);
 .minute:after {
     content: "";
     position: absolute;
-    border: 2px solid bisque;
+    border: 2px solid #fff;
     border-right: none;
     height: 50px;
     left: -10px;
@@ -111,23 +111,3 @@ transform: translate(-50%, -50%);
     width: calc(var(--clock-size)/ 2.75);
     transform: translatey(-50%);
 }
-
-.sachi {
-    font-family: 'Courier New', Courier, monospace;
-    color: rgb(255, 140, 0);
-    --clock-size: 360px;
-    width: var(--clock-size);
-    height: var(--clock-size);
-    position: fixed;
-    inset: 48%;
-    margin: auto;
-    border-radius: 50%;
-    transform: translateY(62%);
-  }
-
-b {
-    border: 1px solid;
-    padding-left: 7px;
-    padding-right: 7px;
-    border-radius: 10px;
-  }
