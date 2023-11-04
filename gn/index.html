@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>anime | sachinkn.in</title>
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+	<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+	<link href='https://fonts.googleapis.com/css2?family=Corinthia:wght@700&display=swap' rel='stylesheet'>
+    <style>
+        .container {
+			font-size: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 75vh; /* This ensures the container takes up the full viewport height */
+            background-color: #111111;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="container">
+    <label for="nameInput">Please enter your name</label><br/>
+    <input type="text" id="nameInput" name="name" placeholder="Your name"><br/>
+    <button onclick="displayName()">Submit</button>
+
+    <script>
+        function displayName() {
+            var name = document.getElementById("nameInput").value;
+            document.write("<html>");
+            document.write("<head>");
+            document.write("<meta name='viewport'' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=yes'>");
+            document.write("<title>anime | sachinkn.in</title>");
+            document.write("<link rel='preconnect' href='https://fonts.googleapis.com'>");
+            document.write("<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>");
+            document.write("<link href='https://fonts.googleapis.com/css2?family=Corinthia:wght@700&display=swap' rel='stylesheet'>");
+            document.write("<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap' rel='stylesheet'>");
+            document.write("<link href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css' rel='stylesheet'>");
+            document.write("<style>");
+            document.write(".container{font-size: 15px;display:flex;flex-direction:column;justify-content:center;align-items:center;height:75vh;background-color:#111111;color:#fff}");
+            document.write("</style>");
+            document.write("</head>");
+            document.write("<body class='container'>");
+            document.write("<h1 style='font-family: Corinthia, cursive; trans; transform: translate(0px, 40px);'>Good night...</h1>");
+            document.write("<h1 style='font-family: Roboto; font-size: 80px; color: #4672fe;' class='animate__animated animate__flip'>" + name + "</h1>");
+            document.write("</body>");
+            document.write("</html>");
+        }
+    </script>	
+</body>
+</html>
