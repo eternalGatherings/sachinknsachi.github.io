@@ -57,11 +57,35 @@ body {
   margin-bottom: 10px;
   padding-top: 100px;
   padding-bottom: 20px;
-  font-size: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.contents p {
+  color: #3a3a3f;
+  text-align: center;
+}
+
+.end-text {
+  margin-left: 10px;
+}
+
+.wedding-location {
+  font-size: 450%;
+  margin-top: 50px;
+  font-family: 'Great Vibes', cursive;
+}
+
+.location {
+  font-size: 140%;
+  margin-top: 20px;
+}
+
+.req {
+  font-size: 140%;
+  margin-top: 30px;
 }
 
 .gmaps {
@@ -98,8 +122,70 @@ body {
     width: 60%;
   }
 
-  .gmaps {
+  .wedding-location {
     margin-top: 20px;
+  }
+  
+  .location {
+    margin-top: 10px;
+  }
+  
+  .req {
+    margin-top: 10px;
+  }
+
+  .gmaps {
+    margin-top: 30px;
     height: 200px;
   }
+}
+
+/* SVG CSS */
+
+.name-date {
+  width: 60%;
+  height: 60%;
+}
+
+tspan {
+  white-space: pre
+}
+
+.t0 {
+  font-size: 28px;
+  fill: #3a3a3f;
+  font-weight: 400;
+  font-family: "Baskervville-Regular", "Baskervville"
+}
+
+.t1 {
+  font-size: 82px;
+  fill: #3a3a3f;
+  font-weight: 400;
+  font-family: "Baskervville-Regular", "Baskervville"
+}
+
+.s2 {
+  fill: #3a3a3f
+}
+
+.t3 {
+  font-size: 134px;
+  fill: #3a3a3f;
+  font-weight: 400;
+  font-family: "GreatVibes-Regular", "Great Vibes"
+}
+
+.t4 {
+  font-size: 34px;
+  fill: #3a3a3f;
+  font-weight: 400;
+  font-family: "Baskervville-Regular", "Baskervville"
+}
+
+.t5 {
+  font-size: 135px;
+  fill: #3a3a3f;
+  font-weight: 400;
+  font-family: "GreatVibes-Regular", "Great Vibes"
 }
