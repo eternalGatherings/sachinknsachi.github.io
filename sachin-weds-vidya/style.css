@@ -11,11 +11,6 @@
   outline: 0;
 }
 
-.kn-text {
-  font-family: 'Noto Sans Kannada';
-  display: none;
-}
-
 body {
   background: var(--themeColor);
   width: 100vw;
@@ -31,16 +26,10 @@ body {
   align-items: center;
 }
 
-.Hedaing {
+.heading {
   color: #3a3a3f;
   font-size: 60px;
   font-family: "Great Vibes", cursive;
-}
-
-.kn-text-heading {
-  color: #3a3a3f;
-  font-size: 40px;
-  font-weight: 500;
 }
 
 .jodi-img {
@@ -120,12 +109,12 @@ body {
   font-family: "Great Vibes", cursive;
 }
 
-.name-2 {
+.and-name-2 {
   display: flex;
   transform: translateY(-20%);
 }
 
-.name-2 .and {
+.and-name-2 .and {
   margin-top: 20px;
   font-size: 25%;
   font-family: "Baskervville-Regular", "Baskervville";
@@ -285,13 +274,35 @@ body {
   left: 4px;
 }
 
+/* language */
+.kn-text {
+  font-family: 'Noto Sans Kannada';
+  display: none;
+}
+
+.heading.kn-text {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.name-1.kn-text, .name-2.kn-text {
+  font-size: 120px;
+  font-weight: 400;
+}
+
+.and.kn-text {
+  font-family: 'Noto Sans Kannada';
+  font-size: 40px;
+  font-weight: 300;
+}
+
 @media screen and (max-width: 1230px) {
   .contents {
     width: 90%;
     font-size: 5px;
   }
 
-  .Hedaing {
+  .heading {
     font-size: 25px;
   }
 
@@ -349,9 +360,21 @@ body {
     font-size: 50%;
   }
 
-  /* kannada */
-  .kn-text-heading {
+  .heading.kn-text {
     font-size: 20px;
+  }
+  
+  .name-1.kn-text {
+    margin-top: 20px;
+  }
+
+  .name-1.kn-text, .name-2.kn-text {
+    font-size: 50px;
+  }
+  
+  .and.kn-text {
+    font-size: 20px;
+    font-weight: 400;
   }
 }
 
