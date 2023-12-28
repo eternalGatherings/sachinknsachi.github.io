@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Baskervville&family=Great+Vibes&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Baskervville&family=Great+Vibes&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --themeColor: #a094d4;
+}
 
 * {
   margin: 0;
@@ -6,9 +11,15 @@
   outline: 0;
 }
 
+.kn-text {
+  font-family: 'Noto Sans Kannada';
+  display: none;
+}
+
 body {
-  background: #a094d4;
-  width: 98vw;
+  background: var(--themeColor);
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .container {
@@ -16,14 +27,20 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 
 .Hedaing {
   color: #3a3a3f;
   font-size: 60px;
-  font-family: 'Great Vibes', cursive;
+  font-family: "Great Vibes", cursive;
+}
+
+.kn-text-heading {
+  color: #3a3a3f;
+  font-size: 40px;
+  font-weight: 500;
 }
 
 .jodi-img {
@@ -75,7 +92,7 @@ body {
 .wedding-location {
   font-size: 450%;
   margin-top: 50px;
-  font-family: 'Great Vibes', cursive;
+  font-family: "Great Vibes", cursive;
 }
 
 .location {
@@ -96,6 +113,178 @@ body {
   z-index: 1;
 }
 
+/* name-date */
+.names {
+  color: #3a3a3f;
+  font-size: 150px;
+  font-family: "Great Vibes", cursive;
+}
+
+.name-2 {
+  display: flex;
+  transform: translateY(-20%);
+}
+
+.name-2 .and {
+  margin-top: 20px;
+  font-size: 25%;
+  font-family: "Baskervville-Regular", "Baskervville";
+}
+
+.dates {
+  font-family: "Baskervville-Regular", "Baskervville";
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 5px;
+}
+
+.day-date-time {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.date {
+  margin-left: 25px;
+  margin-right: 25px;
+  font-size: 300%;
+}
+
+.year {
+  font-size: 130%;
+}
+
+.day, .time {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid #3a3a3f;
+  border-bottom: 1px solid #3a3a3f;
+}
+
+.day {
+  padding-left: 20px;
+}
+
+.time {
+  padding-right: 10px;
+}
+
+.logo {
+  background: #f1f0f0;
+  height: 60px;
+}
+
+.footer {
+  background: #fff;
+  text-decoration: none;
+  width: 100vw;
+  font-size: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Switch */
+.button {
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  z-index: 1;
+  bottom: 50px;
+  right: 5px;
+  width: 74px;
+  height: 36px;
+  overflow: hidden;
+}
+
+.knobs,
+.layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.button.r,
+.button.r .layer {
+  border-radius: 100px;
+}
+
+.button.b2 {
+  border-radius: 0.2em;
+}
+
+.checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.knobs {
+  z-index: 2;
+}
+
+.layer {
+  width: 100%;
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+#button-13 .knobs:before,
+#button-13 .knobs:after,
+#button-13 .knobs span {
+  position: absolute;
+  top: 4px;
+  width: 20px;
+  height: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  padding: 9px 4px;
+  border-radius: 2px;
+  transition: 0.3s ease all;
+}
+
+#button-13 .knobs:before,
+#button-13 .knobs:after {
+  color: #4e4e4e;
+  z-index: 1;
+}
+
+#button-13 .knobs:before {
+  content: "ಕ";
+  left: 4px;
+}
+
+#button-13 .knobs:after {
+  content: "EN";
+  right: 4px;
+}
+
+#button-13 .knobs span {
+  width: 25px;
+  left: 37px;
+  background-color: #a094d4;
+  z-index: 2;
+}
+
+#button-13 .checkbox:checked + .knobs span {
+  left: 4px;
+}
+
 @media screen and (max-width: 1230px) {
   .contents {
     width: 90%;
@@ -103,7 +292,7 @@ body {
   }
 
   .Hedaing {
-    font-size: 20px;
+    font-size: 25px;
   }
 
   .text-img {
@@ -125,11 +314,11 @@ body {
   .wedding-location {
     margin-top: 20px;
   }
-  
+
   .location {
     margin-top: 10px;
   }
-  
+
   .req {
     margin-top: 10px;
   }
@@ -138,93 +327,31 @@ body {
     margin-top: 30px;
     height: 200px;
   }
+
+  .names {
+    font-size: 60px;
+  }
+
+  .dates {
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+  .day {
+    padding-left: 10px;
+  }
+  
+  .time {
+    padding-right: 8px;
+  }
+
+  .footer {
+    font-size: 50%;
+  }
+
+  /* kannada */
+  .kn-text-heading {
+    font-size: 20px;
+  }
 }
 
-/* SVG CSS */
-.name-date {
-  width: 60%;
-  height: 60%;
-}
-
-tspan {
-  white-space: pre
-}
-
-.t0 {
-  font-size: 28px;
-  fill: #3a3a3f;
-  font-weight: 400;
-  font-family: "Baskervville-Regular", "Baskervville"
-}
-
-.t1 {
-  font-size: 82px;
-  fill: #3a3a3f;
-  font-weight: 400;
-  font-family: "Baskervville-Regular", "Baskervville"
-}
-
-.s2 {
-  fill: #3a3a3f
-}
-
-.t3 {
-  font-size: 134px;
-  fill: #3a3a3f;
-  font-weight: 400;
-  font-family: "GreatVibes-Regular", "Great Vibes"
-}
-
-.t4 {
-  font-size: 34px;
-  fill: #3a3a3f;
-  font-weight: 400;
-  font-family: "Baskervville-Regular", "Baskervville"
-}
-
-.t5 {
-  font-size: 135px;
-  fill: #3a3a3f;
-  font-weight: 400;
-  font-family: "GreatVibes-Regular", "Great Vibes"
-}
-
-/* Switch */
-.switch {
-  --false: #e4c500;
-  --true: #e4c500;
-  position: fixed;
-  z-index: 1;
-  bottom: 50px;
-  right: 5px;
-}
-
-input[type="checkbox"] {
-  appearance: none;
-  height: 2rem;
-  width: 3.5rem;
-  background-color: #fff;
-  position: relative;
-  border-radius: 0.2em;
-  cursor: pointer;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3)
-}
-
-input[type="checkbox"]::before {
-  content: "";
-  display: block;
-  height: 1.9em;
-  width: 1.9em;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  top: 50%;
-  left: calc(1.9em / 2 + 0.3em);
-  background-color: var(--false);
-  border-radius: 0.2em;
-  transition: 0.3s ease;
-}
-
-input[type="checkbox"]:checked::before {
-  background-color: var(--true);
-  left: calc(100% - (1.9em / 2 + 0.3em));
-}
