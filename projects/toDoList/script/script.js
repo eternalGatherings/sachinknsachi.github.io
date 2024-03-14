@@ -28,7 +28,7 @@ function renderTodoList() {
 
         let deleteButton = window.document.createElement('button');
         deleteButton.setAttribute('class', 'todo-delete-button');
-        deleteButton.setAttribute('onclick', deleteRecord(${i}));
+        deleteButton.setAttribute('onclick', `deleteRecord(${i})`);
         deleteButton.textContent = 'Delete';
 
         newRow.appendChild(todoName);
