@@ -20,20 +20,20 @@ function resetGame() {
     document.getElementById('js-moves').innerHTML = '';
 }
 
-function selectChoice(selectedChoice) {
-    let result;
-    let computerChoice;
+function selectRandom() {
     let randomNumber = Math.random();
 
-    if (randomNumber >= 0 && randomNumber < 1/3) {
-        computerChoice = 'rock';
-    }
-    else if (randomNumber >= 1/3 && randomNumber < 2/3) {
-        computerChoice = 'paper';
-    }
-    else {
-        computerChoice = 'scissors';
-    }
+    if (randomNumber >= 0 && randomNumber < 1/3)
+        return 'rock';
+    else if (randomNumber >= 1/3 && randomNumber < 2/3)
+        return 'paper';
+    else
+        return 'scissors';
+}
+
+function selectChoice(selectedChoice) {
+    let result;
+    let computerChoice = selectRandom();
 
     if (selectedChoice === 'rock') {
         if (computerChoice === 'rock') {
@@ -86,3 +86,24 @@ function selectChoice(selectedChoice) {
 
     localStorage.setItem('score', JSON.stringify(score));
 }
+
+let isAutoPlaying = false;
+let intervelId;
+
+function autoPlay() {
+    if (isAutoPlaying) {
+        isAutoPlaying = false;
+        clearInterval(intervelId);
+    } else {
+        intervelId = setInterval(() => {
+            selectChoice(selectRandom());
+        }, 1000);
+        isAutoPlaying = true;
+    }
+}
+
+document.querySelector('.js-auto-play-button')
+    .addEventListener('click', function() {
+        autoPlay();
+    });
+

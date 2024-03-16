@@ -40,11 +40,13 @@ body {
   margin-top: 60px;
 }
 
-.reset-button {
+.reset-button, .auto-play-button {
   background-color: #fff;
   border: none;
   font-size: 15px;
   padding: 8px 15px;
   cursor: pointer;
   border-radius: 4px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
