@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- This code is needed for responsive design to work.
+      (Responsive design = make the website look good on
+      smaller screen sizes like a phone or a tablet). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Amazon.in Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More</title>
+    <link rel="icon" href="images/main/amazon-fevicon.ico">
+
+    <!-- Load a font called Roboto from Google Fonts. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Here are the CSS files for this page. -->
+    <link rel="stylesheet" href="styles/shared/general.css">
+    <link rel="stylesheet" href="styles/shared/amazon-header.css">
+    <link rel="stylesheet" href="styles/pages/home/home.css">
+</head>
+
+<body>
+    <header class="amazon-header">
+        <div class="amazon-logo">
+            <a class="amazon-logo-nav" href="index.html">
+                <img src="images/main/amazon-logo-white.png" alt="">
+                <span class="amazon-logo-locale">.in</span>
+            </a>
+        </div>
+        <div class="location">
+            <img class="location-icon" src="images/icons/location-icon.png"></img>
+            <div class="location-text">
+                <span class="upper-text">Delivering to Bengaluru</span>
+                <span class="lower-text">560056</span>
+            </div>
+        </div>
+        <div class="search-bar">
+            <input class="search-field" type="search" placeholder="Search Amazon.in">
+            <button class="search-button">
+                <img class="search-icon" src="images/icons/search-icon.png" alt="">
+            </button>
+        </div>
+        <div class="account">
+            <div class="location-text">
+                <span class="upper-text">Hello, sign in</span>
+                <span class="lower-text">Account & Lists</span>
+            </div>
+        </div>
+        <div class="orders">
+            <div class="location-text">
+                <span class="upper-text">Returns</span>
+                <span class="lower-text">& Orders</span>
+            </div>
+        </div>
+        <a href="checkout/index.html">
+            <div class="cart">
+                <img class="cart-icon" src="images/icons/cart-icon.png" alt="">
+                <div class="cart-count">0</div>
+                <span class="cart-text lower-text">Cart</span>
+            </div>
+        </a>
+    </header>
+
+    <section class="main-container">
+        <div class="product-grid">
+            
+        </div>
+    </section>
+    <script type="module" src="scripts/amazon.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+.checkout-header {
+    background-color: #fff;
+    height: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.amazon-logo {
+    width: 150px;
+}
+
+.amazon-logo img {
+    width: 100px;
+    margin-top: 12px;
+}
+
+.return-to-home-link {
+    color: rgb(0, 113, 133);
+    font-size: 23px;
+}
+
+.checkout-items-count {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.checkout-lock-icon {
+    width: 150px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
