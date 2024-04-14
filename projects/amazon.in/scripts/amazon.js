@@ -1,6 +1,5 @@
 import {cart, addToCart} from '../data/cart.js'
 import {products} from '../data/products.js';
-import {formatePrice} from '../scripts/utils/priceUtils.js'
 
 updateCartValue();
 
@@ -17,11 +16,11 @@ products.forEach((product) => {
             <div class="product-name limit-text-to-2-lines">${product.name}</div>
 
             <div class="product-rating-container">
-                <img class="product-rating-stars" src="images/ratings/rating-${product.rating.stars * 10}.png" alt="">
+                <img class="product-rating-stars" src="${product.getStarsUrl()}" alt="">
                 <span class="product-rating-count link-primary">${product.rating.count}</span>
             </div>
 
-            <div class="product-price">$${formatePrice(product.priceCents)}</div>
+            <div class="product-price">${product.getPrice()}</div>
 
             <div class="product-quantity-container">
                 <select>
@@ -37,6 +36,10 @@ products.forEach((product) => {
                     <option value="10">10</option>
                 </select>
             </div>
+
+            ${product.extraInfoHtml()}
+
+            <div class="product-spacer"></div>
 
             <div class="added-to-cart">
                 <img class="added-to-cart-check" src="images/icons/checkmark.png" alt="">

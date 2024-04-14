@@ -83,3 +83,7 @@
 .add-to-cart-button {
   margin-top: 8px;
 }
+
+.product-spacer {
+  flex: 1;
+}
