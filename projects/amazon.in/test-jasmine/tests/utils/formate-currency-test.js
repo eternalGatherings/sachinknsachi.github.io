@@ -1,4 +1,4 @@
-import { formatePrice } from '../../scripts/utils/priceUtils.js';
+import { formatePrice } from '../../../scripts/utils/priceUtils.js';
 
 describe('Test suite: formatePrice for integers', () => {
     it('Converts cents into dollers', () => {
@@ -13,3 +13,4 @@ describe('Test suite: formatePrice for integers', () => {
         expect(formatePrice(2000.5)).toBe('20.01');
     });
 });
+
