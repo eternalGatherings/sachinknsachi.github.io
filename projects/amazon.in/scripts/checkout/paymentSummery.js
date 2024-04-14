@@ -25,7 +25,7 @@ export function renderPaymentSummary() {
         document.querySelector('.js-payment-info').innerHTML = `
             <div class="payment-summary-title">Order Summary</div>
             <div class="payment-summary-row">
-                <div>Items (3):</div>
+                <div>Items (${getCartTotalQuantity()}):</div>
                 <div class="payment-summary-money">$${formatePrice(productPriceCents)}</div>
             </div>
             <div class="payment-summary-row">
@@ -47,8 +47,13 @@ export function renderPaymentSummary() {
         `;
 
     })
+}
 
-    console.log(productPriceCents);
-    console.log(deliveryPriceCents);
+export function getCartTotalQuantity() {
+    let cartQuantity = 0
+    cart.forEach((item) => {
+        cartQuantity += item.quantity;
+    });
+    return cartQuantity;
 }
 

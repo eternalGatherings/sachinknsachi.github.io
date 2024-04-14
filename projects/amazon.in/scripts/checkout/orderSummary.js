@@ -4,6 +4,7 @@ import { formatePrice } from '../../scripts/utils/priceUtils.js'
 import { deliveryOptions, getDeliveryOptionsById } from '../../scripts/deliveryOptions.js'
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js'
 import { renderPaymentSummary } from './paymentSummery.js';
+import { renderCheckoutHeader } from './checkoutHeader.js';
 
 const today = dayjs();
 
@@ -84,6 +85,7 @@ export function renderOrderSummary() {
                 removeFromCart(productId);
                 document.querySelector(`.js-cart-item-container-${productId}`).remove();
                 renderPaymentSummary();
+                renderCheckoutHeader();
             })
         });
 
