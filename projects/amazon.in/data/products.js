@@ -41,7 +41,7 @@ class Clothing extends Product {
   extraInfoHtml() {
     return `
       <span>
-        <a class='link-primary' style='align-items: flex-start' href='${this.sizeChartLink}' target='_blank'>
+        <a class='link-primary chart-link' href='${this.sizeChartLink}' target='_blank'>
           Size chart
         </a>
       </span>

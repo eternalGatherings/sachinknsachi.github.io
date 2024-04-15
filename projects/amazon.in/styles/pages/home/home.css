@@ -87,3 +87,8 @@
 .product-spacer {
   flex: 1;
 }
+
+.chart-link {
+  font-size: 14px;
+  text-decoration: underline;
+}
