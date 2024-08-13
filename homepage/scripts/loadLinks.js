@@ -29,7 +29,7 @@ function loadLinks() {
 
     const queryParams = getQueryParams();
 
-    fetch(`../FlatFiles/${queryParams.user}.json`)
+    fetch(`./FlatFiles/${queryParams.user}.json`)
         .then(response => response.json())
         .then(data => {
 
