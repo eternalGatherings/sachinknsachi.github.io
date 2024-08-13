@@ -28,8 +28,8 @@ function createLinkElement(link) {
 function loadLinks() {
 
     const queryParams = getQueryParams();
-
-    fetch(`./FlatFiles/${queryParams.user}.json`)
+    
+    fetch(`https://github.com/sachinknsachi/sachinknsachi.github.io/blob/master/homepage/FlatFiles/${queryParams.user}.json`)
         .then(response => response.json())
         .then(data => {
 
