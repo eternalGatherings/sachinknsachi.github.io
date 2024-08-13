@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odysseus Solutions</title>
+    <style>
+
+        :root {
+            /* --theme: #573718;
+            --image: url("images/lambo-1.jpg"); */
+            --theme: #074888;
+            --image: url("images/cruise-2.jpg");
+        }
+
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--theme);
+            padding: 8px;
+            transition: background-color 0.15s, border-radius 0.15s, color 0.15s;
+        }
+
+        a:hover {
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.15);
+            border-radius: 5px;
+        }
+
+        .home-page {
+            background-image: var(--image);
+            min-height: 100vh;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: top;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* gap: 20px; */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sections {
+            border-bottom: 1px solid var(--theme);
+            padding: 15px 0;
+        }
+
+        .pipe-separater {
+            color: var(--theme);
+            font-weight: 100;
+            margin: 0 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <main class="home-page">
+        <div class="sections">
+            <section class="links">
+                <a href="https://uat.odysol.com/admin/login.aspx" target="_blank">UAT - login</a>
+                <span class="pipe-separater">|</span>
+                <a href="https://sandbox.odysol.com/admin/login.aspx" target="_blank">Sandbox - login</a>
+                <span class="pipe-separater">|</span>
+                <a href="https://mscfnf.odysol.com/swift/cruise?siid=965349&showtrace=true" target="_blank">MSC FNF</a>
+                <span class="pipe-separater">|</span>
+                <a href="https://localhost/odyssey/admin/login.aspx" target="_blank">LOCAL - login</a>
+                <span class="pipe-separater">|</span>
+                <a href="https://feature1.odysolvd.com/odyssey/admin/login.aspx" target="_blank">Feature 1</a>
+                <span class="pipe-separater">|</span>
+                <a href="https://feature2.odysolvd.com/odyssey/admin/login.aspx" target="_blank">Feature 2</a>
+                <span class="pipe-separater">|</span>
+                <a href="https://uat.odysol.com/swift/cruise?siid=130386" target="_blank">CruiseSearch - UAT-USD</a>
+                <span class="pipe-separater">|</span>
+                <a href="https://uat.odysol.com/web/air/default.aspx?siid=130386&showtrace=true&ignore=true" target="_blank">AirSearch - UAT-USD</a>
+                <span class="pipe-separater">|</span>
+                <a href="https://uat.odysol.com/web/hotel/default.aspx?siid=130386&showtrace=true" target="_blank">HotelSearch - UAT-USD</a>
+            </section>
+            <section class="links">
+				<a href="https://odysoll.atlassian.net/" target="_blank">Jira</a>
+                <span class="pipe-separater">|</span>
+                <a href="https://accounts.zoho.com/signin?servicename=ZohoProjects&serviceurl=https%3A%2F%2Fprojects.zoho.com%2Fportal%2Fodysol#allprojects/442995000004522005/" target="_blank">ZOHO</a>
+                <span class="pipe-separater">|</span>
+                <a href="https://projects.odysol.com" target="_blank">Git Lab</a>
+                <span class="pipe-separater">|</span>
+                <a href="http://testlink.odysol.com:81/testlink/lostPassword.php?viewer=new" target="_blank">Test link</a>
+                <span class="pipe-separater">|</span>
+                <a href="https://odysseus.sharepoint.com/sites/Wiki2/SitePages/Test-Cards.aspx?" target="_blank">Test Cards</a>
+                <span class="pipe-separater">|</span>
+                <a href="https://jenkins.odysolvd.com/" target="_blank">Jenkins - Login</a>
+                <span class="pipe-separater">|</span>
+                <a href="https://outlook.office365.com/mail/" target="_blank">Outlook</a>
+            </section>
+            <section class="links">
+				<a href="https://supportdesk.odysol.com/support/odysseus/ShowHomePage.do#Cases/dv/80395000041767001" target="_blank">Support Desk</a>
+                <span class="pipe-separater">|</span>
+                <a href="https://itsupport.odysolvd.com/osticket/" target="_blank">IT Help Desk</a>
+                <span class="pipe-separater">|</span>
+                <a href="https://attendance.odysolvd.com/MainPage/MainPage" target="_blank">Smart Office Login</a>
+				<span class="pipe-separater">|</span>
+				<a href="https://apps.paybooks.in/mylogin.aspx" target="_blank">Paybooks</a>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
