@@ -1,0 +1,19 @@
+{
+    "title": "Mirafra",
+    "defaultTheme": "3",
+    "sections": [
+      {
+        "links": [
+          { "text": "Mirafra", "url": "" }
+        ]
+      },
+      {
+        "links": [
+          { "text": "Outlook", "url": "https://outlook.office365.com/mail/" },
+          { "text": "Mirafra WebMail", "url": "https://mail.mirafra.com/roundcubemail/?_task=mail&_mbox=INBOX" },
+          { "text": "Saral ESS", "url": "https://eip.mirafra.com/payroll/Home/Employee" },
+          { "text": "TWiki : SachinKN", "url": "https://apps.mirafra.com/twiki/bin/view/Main/SachinKN" }
+        ]
+      }
+    ]
+  }
