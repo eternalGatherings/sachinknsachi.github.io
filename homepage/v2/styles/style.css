@@ -1,0 +1,64 @@
+body {
+    background-image: url("/Img/lambo-1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+}
+
+a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.links {
+    margin-top: 100px;
+    width: 50rem;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.link {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.link-icon {
+    background-color: #ffffff;
+    height: 38px;
+    width: 38px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.link-icon img {
+    height: 70%;
+    width: 70%;
+}
+
+.link-text {
+    color: #ffffff;
+    font-family: Segoe UI, Segoe UI Midlevel, Segoe WP, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 70px;
+}

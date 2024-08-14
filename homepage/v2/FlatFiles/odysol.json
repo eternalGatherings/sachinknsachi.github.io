@@ -1,0 +1,68 @@
+{
+  "title": "Odysseus Solutions",
+  "defaultTheme": "2",
+  "links": [
+    { "text": "UAT - login", "url": "https://uat.odysol.com/admin/login.aspx" },
+    {
+      "text": "Sandbox - login",
+      "url": "https://sandbox.odysol.com/admin/login.aspx"
+    },
+    {
+      "text": "MSC FNF",
+      "url": "https://mscfnf.odysol.com/swift/cruise?siid=965349&showtrace=true"
+    },
+    {
+      "text": "LOCAL - login",
+      "url": "https://localhost/odyssey/admin/login.aspx"
+    },
+    {
+      "text": "Feature 1",
+      "url": "https://feature1.odysolvd.com/odyssey/admin/login.aspx"
+    },
+    {
+      "text": "Feature 2",
+      "url": "https://feature2.odysolvd.com/odyssey/admin/login.aspx"
+    },
+    {
+      "text": "CruiseSearch - UAT-USD",
+      "url": "https://uat.odysol.com/swift/cruise?siid=130386"
+    },
+    {
+      "text": "AirSearch - UAT-USD",
+      "url": "https://uat.odysol.com/web/air/default.aspx?siid=130386&showtrace=true&ignore=true"
+    },
+    {
+      "text": "HotelSearch - UAT-USD",
+      "url": "https://uat.odysol.com/web/hotel/default.aspx?siid=130386&showtrace=true"
+    },
+    { "text": "Jira", "url": "https://odysoll.atlassian.net/" },
+    {
+      "text": "ZOHO",
+      "url": "https://accounts.zoho.com/signin?servicename=ZohoProjects&serviceurl=https%3A%2F%2Fprojects.zoho.com%2Fportal%2Fodysol#allprojects/442995000004522005/"
+    },
+    { "text": "Git Lab", "url": "https://projects.odysol.com" },
+    {
+      "text": "Test link",
+      "url": "http://testlink.odysol.com:81/testlink/lostPassword.php?viewer=new"
+    },
+    {
+      "text": "Test Cards",
+      "url": "https://odysseus.sharepoint.com/sites/Wiki2/SitePages/Test-Cards.aspx?"
+    },
+    { "text": "Jenkins - Login", "url": "https://jenkins.odysolvd.com/" },
+    { "text": "Outlook", "url": "https://outlook.office365.com/mail/" },
+    {
+      "text": "Support Desk",
+      "url": "https://supportdesk.odysol.com/support/odysseus/ShowHomePage.do#Cases/dv/80395000041767001"
+    },
+    {
+      "text": "IT Help Desk",
+      "url": "https://itsupport.odysolvd.com/osticket/"
+    },
+    {
+      "text": "Smart Office Login",
+      "url": "https://attendance.odysolvd.com/MainPage/MainPage"
+    },
+    { "text": "Paybooks", "url": "https://apps.paybooks.in/mylogin.aspx" }
+  ]
+}
